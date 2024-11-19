@@ -1,0 +1,113 @@
+/*
+Theme Name: ENI News
+Description: Mon premier thème WordPress
+Author: Dave Loper
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.4
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* --------------------------------------------------------
+* CSS non responsive
+* --------------------------------------------------------- */
+
+/* COMMUN A TOUTES LES RESOLUTIONS */
+
+/*
+html {
+	font-size: 100%;
+}
+*/
+
+body {
+    font-size: 1rem; /* 16 px */
+    /* font-size: 1.6rem; /* 16 px */
+}
+
+nav, footer {
+    background-color: #134a82;
+    margin : 5px 0;
+    padding: 5px;
+}
+
+#menu a, footer a
+{
+    color: #FFF;
+    margin-right: 10px;
+}
+
+#gauche {
+    margin-bottom: 5px;
+}
+
+#droite {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#menu {
+    list-style-type: none;
+}
+
+img {
+    margin: 5px 0;
+    padding: 0;
+}
+
+/* ajout d'une classe pour rendre les images responsive, mais pas sur toutes les images
+(le logo, de petite taille, n'en a pas besoin) */
+.img-fluid
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* --------------------------------------------------------
+* MOBILES
+* --------------------------------------------------------- */
+@media screen and (max-width: 768px)
+{
+    /* on masque la colonne de droite */
+    #droite {
+        display: none;
+    }
+} /* fin si < 768 */
+
+/* --------------------------------------------------------
+* GRANDS ECRANS
+* --------------------------------------------------------- */
+@media screen and (min-width: 768px)
+{
+    body
+    {
+        width: 1110px;
+        margin: auto;
+    }
+
+    #menu li, footer ul li
+    {
+        display: inline;
+    }
+
+    #menu
+    {
+        list-style-type: none;
+    }
+
+    #droite
+    {
+        background-color: #CCC;
+        float: right;
+        height: 500px;
+        width: 30%;
+        margin-bottom: 5px;
+    }
+
+    footer
+    {
+        clear: both;
+    }
+} /* fin si > 768px */
