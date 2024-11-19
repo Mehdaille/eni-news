@@ -1,0 +1,1 @@
+alert('coucou mon js est bien chargé')
