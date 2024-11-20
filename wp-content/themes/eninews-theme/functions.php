@@ -23,3 +23,9 @@ function eninews_add_my_scripts() {
 add_action('wp_enqueue_scripts', 'eninews_add_my_scripts');
 
 add_theme_support('post-thumbnails');
+
+function eninews_set_title_tag() {
+    add_theme_support( 'title-tag');
+}
+
+add_action('after_setup_theme', 'eninews_set_title_tag' );
