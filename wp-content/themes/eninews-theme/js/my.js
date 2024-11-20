@@ -1,1 +1,3 @@
-alert('coucou mon js est bien chargé')
+// alert('Coucou !! Mon JS est bien chargé ! ;)')
+
+console.log('test')

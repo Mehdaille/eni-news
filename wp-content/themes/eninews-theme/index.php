@@ -6,6 +6,8 @@
     <div id="gauche">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
+                // Affichage de la miniature
+                <div class='thumbnail'><?php the_post_thumbnail('thumbnail'); ?></div>
                 <h2><?php the_title(); ?> (Article n°<?php the_ID(); ?>)</h2>
                 <div><?php the_excerpt(); ?></div>
                 <div><a href="<?php the_permalink(); ?>">Voir l'article</a> | <i>Publié le <?php the_date_xml(); ?>
@@ -14,5 +16,5 @@
         <?php else : ?>
             <div>Aucun article publié</div>
         <?php endif; ?>
-    </div >
+    </div>
 <?php get_footer(); ?>

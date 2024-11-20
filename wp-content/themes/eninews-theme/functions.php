@@ -15,14 +15,11 @@ function eninews_title_uppercase($titre) {
 
 add_filter('the_title', 'eninews_title_uppercase');
 
-function eninews_add_my_style() {
-    wp_enqueue_style('my.css', get_template_directory_uri().'/css/my.css');
+function eninews_add_my_scripts() {
+    wp_enqueue_script('my.js', get_template_directory_uri().'/js/my.js'); // Chargement du JS
+    wp_enqueue_style('my.css', get_template_directory_uri().'/css/my.css'); // Chargement du CSS
 }
 
-add_action('wp_enqueue_scripts', 'eninews_add_my_style');
+add_action('wp_enqueue_scripts', 'eninews_add_my_scripts');
 
-function eninews_add_my_script() {
-    wp_enqueue_script('my.js', get_template_directory_uri().'/js/my.js');
-}
-
-add_action('wp_enqueue_scripts', 'eninews_add_my_script');
+add_theme_support('post-thumbnails');

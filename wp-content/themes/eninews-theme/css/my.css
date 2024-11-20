@@ -3,3 +3,12 @@
 * {
     font-family: 'Roboto', 'sans-serif';
 }
+
+.thumbnail {
+    float: left;
+    margin: 10px;
+}
+
+.thumbnail-border {
+    border: 1px solid #000;
+}
