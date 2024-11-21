@@ -15,4 +15,10 @@
             <div>Aucun article publié</div>
         <?php endif; ?>
     </div >
+<?php
+the_post_navigation(array(
+    'prev_text' => __('Previous Post') . '<span>%title</span>',
+    'next_text' => __('Next Post') . '<span>%title</span>',
+));
+?>
 <?php get_footer(); ?>

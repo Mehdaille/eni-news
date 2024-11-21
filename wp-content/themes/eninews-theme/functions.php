@@ -29,3 +29,11 @@ function eninews_set_title_tag() {
 }
 
 add_action('after_setup_theme', 'eninews_set_title_tag' );
+
+function custom_posts_per_page( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_archive() ) {
+        $query->set( 'posts_per_page', 3 ); // Limite à 5 articles par page
+    }
+}
+
+add_action( 'pre_get_posts', 'custom_posts_per_page' );

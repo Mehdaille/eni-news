@@ -21,6 +21,11 @@
                         par <?php the_author(); ?></i> dans : <?php the_category(); ?></div>
                 <hr>
             <?php endwhile; ?>
+            <?php the_posts_pagination(array(
+                'mid_size' => 2,
+                'prev_text' => esc_html('&larr;'),
+                'next_text' => esc_html('&rarr;'),
+            )); ?>
         <?php else : ?>
             <div>Aucun article publié</div>
         <?php endif; ?>

@@ -16,3 +16,154 @@
 .stop-float {
     clear: left;
 }
+
+.post-navigation .nav-links {
+    position: relative;
+    margin: 0 -20px;
+}
+.pagination {
+    margin: 20px 0;
+}
+
+.pagination .nav-links {
+    clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination .nav-links a,
+.pagination .nav-links span {
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 5px 5px 0;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 0.875em;
+    line-height: 40px;
+    color: #777;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.pagination .nav-links .current,
+.pagination .nav-links .current:hover,
+.pagination .nav-links a:hover {
+    border-color: transparent;
+    text-decoration: none;
+    color: #fff;
+    background-color: #134a82;
+}
+
+.navigation {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    clear: both;
+}
+
+.nav-previous,
+.nav-next {
+    position: relative;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.nav-next {
+    margin-top: 20px;
+}
+
+.nav-previous a,
+.nav-next a {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #888;
+    position: relative;
+}
+
+.nav-previous a span,
+.nav-next a span {
+    display: block;
+    font-size: 0.8125rem;
+    color: #444;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.nav-previous a:hover,
+.nav-next a:hover {
+    text-decoration: none;
+}
+
+.post-navigation {
+    margin: 20px 0;
+    padding: 10px 0;
+    background-color: #f6f6f6;
+    border-radius: 2px;
+}
+
+.post-navigation .nav-previous a:hover,
+.post-navigation .nav-previous a:hover span,
+.post-navigation .nav-next a:hover,
+.post-navigation .nav-next a:hover span {
+    color: #134a82;
+}
+
+@media screen and (min-width: 360px) {
+    /* Post Navigation */
+    .nav-previous,
+    .nav-next {
+        width: 50%;
+        float: left;
+    }
+
+    .nav-previous a:before,
+    .nav-next a:after {
+        font-family: 'simple-line-icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        position: absolute;
+        font-size: 20px;
+        top: 30%;
+    }
+
+    .nav-previous a:before {
+        content: "\71";
+        left: 0;
+    }
+
+    .nav-next a:after {
+        content: "\70";
+        right: 0;
+    }
+
+    .nav-previous a {
+        padding-left: 30px;
+    }
+
+    .nav-next a {
+        padding-right: 30px;
+    }
+
+    .nav-previous {
+        text-align: left;
+    }
+
+    .nav-next {
+        border-left: 1px solid #fff;
+        text-align: right;
+        margin-top: 0;
+    }
+
+    .post-navigation {
+        padding: 20px;
+    }
+}
